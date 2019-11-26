@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChartsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FF-QH-Dsy" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="44" width="414" height="537.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-yl-9nf">
+                                <rect key="frame" x="26" y="84" width="86" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvT-8e-b6k">
+                                        <rect key="frame" x="20" y="0.0" width="46" height="44"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="changeSourceData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gam-bB-OrS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="LvT-8e-b6k" firstAttribute="centerY" secondItem="V0p-yl-9nf" secondAttribute="centerY" id="07L-St-Afe"/>
+                                    <constraint firstAttribute="trailing" secondItem="LvT-8e-b6k" secondAttribute="trailing" constant="20" id="C7l-xW-yFg"/>
+                                    <constraint firstItem="LvT-8e-b6k" firstAttribute="centerX" secondItem="V0p-yl-9nf" secondAttribute="centerX" id="Die-fh-kTj"/>
+                                    <constraint firstAttribute="bottom" secondItem="LvT-8e-b6k" secondAttribute="bottom" id="IKH-8m-vAw"/>
+                                    <constraint firstItem="LvT-8e-b6k" firstAttribute="top" secondItem="V0p-yl-9nf" secondAttribute="top" id="R0t-9G-F3a"/>
+                                    <constraint firstAttribute="height" constant="44" id="h99-qf-IOM"/>
+                                    <constraint firstItem="LvT-8e-b6k" firstAttribute="leading" secondItem="V0p-yl-9nf" secondAttribute="leading" constant="20" id="mUP-Rw-bZr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="needShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V0p-yl-9nf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="2GZ-A8-w5o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4FF-QH-Dsy" secondAttribute="trailing" id="E6q-2S-jCv"/>
+                            <constraint firstItem="4FF-QH-Dsy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="Q0e-2g-S0b"/>
+                            <constraint firstItem="V0p-yl-9nf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="S8d-IH-FuU"/>
+                            <constraint firstItem="4FF-QH-Dsy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e7W-Xd-ZB5"/>
+                            <constraint firstItem="4FF-QH-Dsy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fRy-9O-sF6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeSourceButton" destination="LvT-8e-b6k" id="SAi-Og-guH"/>
+                        <outlet property="chartView" destination="4FF-QH-Dsy" id="toY-ku-34t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="129"/>
+        </scene>
+    </scenes>
+</document>
